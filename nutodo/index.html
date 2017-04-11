@@ -5,7 +5,7 @@
 
 <script type="text/javascript">
 
-var source; 
+var source;
 function dragStarted(evt){
 //start drag
 source=evt.target;
@@ -14,15 +14,33 @@ evt.dataTransfer.setData("text/plain", evt.target.innerHTML);
 //specify allowed transfer
 evt.dataTransfer.effectAllowed = "move";
 }
+
+function draggingOver (evt) {
+  //drag over
+  evt.preventDefault();
+  //specify dat operation
+  evt.dataTransfer.dropEffect = "move";
+}
+
+function dropped (evt){
+  //dropp
+  evt.preventDefault();
+  evt.stopPropagation();
+  // update dat text in dropped item in dis biih
+  source.innerHTML = evt.target.innerHTML;
+  //update text in dropped target
+  evt.target.innerHTML = evt.data
+
+}
 </script>
 
 <body>
 <h1>NUTODO</h1>
 <ul>
-<li draggable="true" ondragstart="dragStarted(event)">high 1</li>
-<li draggable="true" ondragstart="dragStarted(event)">high 2</li>
-<li draggable="true" ondragstart="dragStarted(event)">high 3</li>
-<li draggable="true" ondragstart="dragStarted(event)">high 4</li>
+<li draggable="true" ondragstart="dragStarted(event)" ondragover="draggingOver(event)" ondrop="dropped(event)">high 1</li>
+<li draggable="true" ondragstart="dragStarted(event)" ondragover="draggingOver(event)" ondrop="dropped(event)">high 2</li>
+<li draggable="true" ondragstart="dragStarted(event)" ondragover="draggingOver(event)" ondrop="dropped(event)">high 3</li>
+<li draggable="true" ondragstart="dragStarted(event)" ondragover="draggingOver(event)" ondrop="dropped(event)">high 4</li>
 </ul>
 
 </body>
