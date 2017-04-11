@@ -1,0 +1,29 @@
+
+body, html {
+  background-color: grey;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+[draggable] {
+  user-select: none;
+}
+
+h1 {
+  color: red;
+}
+
+ul {
+margin:auto;
+width:20%;
+text-align:center;
+}
+
+li {
+list-style-type:none;
+padding:5px;
+margin:2px;
+background-color:#CCCCFF;
+border:2px double #CCCCCC;
+}

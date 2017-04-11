@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css"  href="style.css">
+</head>
+
+<script type="text/javascript">
+
+var source; 
+function dragStarted(evt){
+//start drag
+source=evt.target;
+//set data
+evt.dataTransfer.setData("text/plain", evt.target.innerHTML);
+//specify allowed transfer
+evt.dataTransfer.effectAllowed = "move";
+}
+</script>
+
+<body>
+<h1>NUTODO</h1>
+<ul>
+<li draggable="true" ondragstart="dragStarted(event)">high 1</li>
+<li draggable="true" ondragstart="dragStarted(event)">high 2</li>
+<li draggable="true" ondragstart="dragStarted(event)">high 3</li>
+<li draggable="true" ondragstart="dragStarted(event)">high 4</li>
+</ul>
+
+</body>
+</html>

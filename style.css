@@ -22,7 +22,7 @@ ul li {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    -user-select: none;
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
