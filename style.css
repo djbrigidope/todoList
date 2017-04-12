@@ -24,7 +24,7 @@ ul li {
     font-size: 18px;
     transition: 0.2s;
 
-    /* make the list items unselectable */
+    /* make the list items unselectable*/
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -114,4 +114,11 @@ input {
 
 .addBtn:hover {
     background-color: #bbb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 66%;
 }
