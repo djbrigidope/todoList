@@ -1,3 +1,9 @@
+// make dat biiih draggable
+
+[draggable] {
+  user-select: none;
+}
+
 /* Include the padding and border in an element's total width and height */
 * {
     box-sizing: border-box;

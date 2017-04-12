@@ -26,4 +26,10 @@ padding:5px;
 margin:2px;
 background-color:#CCCCFF;
 border:2px double #CCCCCC;
+border-top-left-radius: 75px;
+}
+
+.frame {
+  width: 450px;
+  background-color: white;
 }
