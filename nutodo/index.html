@@ -29,7 +29,7 @@ function dropped (evt){
   // update dat text in dropped item in dis biih
   source.innerHTML = evt.target.innerHTML;
   //update text in dropped target
-  evt.target.innerHTML = evt.data
+  evt.target.innerHTML = evt.dataTransfer.getData("text/plain");
 
 }
 </script>
