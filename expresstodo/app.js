@@ -1,9 +1,9 @@
 'use strict';
 
 const express = require('express'),
+    api = require('./api'),
     app = express(),
     bodyParser = require('body-parser');
-
 
 // Set the views directory and template engine
 app.set('views', __dirname + '/views');
@@ -27,7 +27,10 @@ app.get('/', function (req, res) {
 app.get('/tags/:name.tag', function(req, res) {
   var name = 'tag-' + req.params.name;
   res.render('../client/' + name);
-})
+});
+
+// Mount the api sub application
+app.use('/api/todos/', api);
 
 // Start listening for connections
 app.listen(3000, function (err) {

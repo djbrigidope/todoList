@@ -1,9 +1,11 @@
 doctype html
+html
 head
     script(src="/js/riot.js")
 body
     h1 todo App
     script(type="riot/tag" src="/tags/todo.tag")
-    todo 
+    script(src="/js/client.js")
+    todo
     script.
-        riot.mount('todo');
+        riot.mount('todo', todoAPI);
